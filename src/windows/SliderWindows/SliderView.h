@@ -34,7 +34,9 @@ namespace winrt::SliderWindows::implementation {
         void OnManipulationCompletedHandler(
             winrt::Windows::Foundation::IInspectable const& sender,
             xaml::Input::ManipulationCompletedRoutedEventArgs const& args);
-        
+
+        const double CalculateStepFrequencyPercentageValue(const double& stepPropertyValue) const noexcept;
+
         int64_t m_maxValue, m_minValue;
         double m_value;
     };
